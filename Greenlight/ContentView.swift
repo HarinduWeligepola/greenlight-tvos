@@ -25,11 +25,12 @@ struct ContentView: View {
             case .reveal:
                 RevealView(session: session)
                     .transition(.opacity.combined(with: .scale(scale: 1.04)))
-            case .topPicks, .history:
-                // Screens land in the next branch.
-                Text("Coming soon")
-                    .font(Theme.Font.title())
-                    .foregroundStyle(Theme.textSecondary)
+            case .topPicks:
+                TopPicksView(session: session)
+                    .transition(.opacity)
+            case .history:
+                HistoryView(session: session)
+                    .transition(.move(edge: .trailing).combined(with: .opacity))
             }
         }
         .animation(.spring(response: 0.5, dampingFraction: 0.85), value: session.phase)
