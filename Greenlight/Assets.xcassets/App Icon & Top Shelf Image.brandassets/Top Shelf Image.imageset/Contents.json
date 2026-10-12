@@ -1,16 +1,7 @@
 {
-  "images": [
-    {
-      "idiom": "tv",
-      "scale": "1x"
-    },
-    {
-      "idiom": "tv",
-      "scale": "2x"
-    }
+  "images" : [
+    { "filename" : "shelf_1920x720.png", "idiom" : "tv", "scale" : "1x" },
+    { "filename" : "shelf_3840x1440.png", "idiom" : "tv", "scale" : "2x" }
   ],
-  "info": {
-    "author": "xcode",
-    "version": 1
-  }
+  "info" : { "author" : "xcode", "version" : 1 }
 }
