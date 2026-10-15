@@ -21,11 +21,31 @@ Greenlight turns that into a short game with an unambiguous end state.
 The name is the mechanic: in the film industry a project is *greenlit* when
 everyone in the room approves it.
 
-**Comparable products.** Likewise, MovieMatch, Reelgood, Flickmetrix and
-Netflix's own "Play Something" all attack the same problem — and all of them
-are phone or web products that assume a second screen per person. Greenlight
-runs where the decision is actually made, on the television, with the one
-remote already on the coffee table.
+## Existing apps that are similar
+
+Two kinds of product already work on the "what do we watch?" problem. Group
+matching apps let a group agree, but each person needs their own device. TV
+guides run on the television, but they recommend for one viewer and have no
+way for a room to reach agreement.
+
+| Product | What it does | Where it runs | How a group decides |
+|---|---|---|---|
+| **Swyf Together** | Group members pick genres and services, then swipe on films; a film matches when everyone swipes right | iPhone (also listed for Mac and Vision Pro) | Unanimous match, one device per person |
+| **MovieMatch** | Self-hosted service that deals films from a Plex library; people swipe +1 / −1 and films liked by two or more appear as matches | Browser, against your own Plex server | Majority match, one device per person, needs Plex |
+| **Likewise** | Personal recommendations for films, TV and books, with watch lists and friends' suggestions | Phone, plus TV apps for Apple TV, Android TV and Fire TV | None; recommendations are per person |
+| **Reelgood** | One guide across all streaming subscriptions, with tracking and new-episode alerts | Web, iOS, Android, Android TV | None; single user |
+| **Flickmetrix** | Combines Rotten Tomatoes, IMDb, Letterboxd and Metacritic scores, with filters, to find highly rated films on Netflix and Prime | Web | None; one person searches for the group |
+| **Netflix "Play Something"** | A shuffle button that started a title for you; withdrawn by Netflix in 2023 | Netflix apps, including TVs | None; chooses for you rather than asking the room |
+
+**Where Greenlight fits.** It combines the two halves. It keeps the unanimous
+"everybody said yes" rule that makes Swyf Together satisfying, but moves it
+onto the television, where the decision is actually made, using the one remote
+already on the coffee table. Nobody needs an account, a phone, or a server.
+Votes are secret, so the loudest person on the sofa cannot steer the room, and
+if nothing is unanimous the room still leaves with its best-supported film
+instead of starting again. Netflix's withdrawal of "Play Something" is a useful
+signal: a TV feature that decides *for* a group was not enough, which is the
+gap a TV feature that lets the group decide *together* is aimed at.
 
 ---
 
@@ -134,7 +154,9 @@ Greenlight/
 
 ### Design system
 
-Dark-native, because tvOS has no light appearance.
+Dark only, by design. tvOS does offer a light appearance, but the app sets
+`.preferredColorScheme(.dark)`: it is used in a dim living room, and the green
+reveal only lands against a dark screen.
 
 | Token | Hex | Use |
 |---|---|---|
